@@ -107,11 +107,8 @@ function getQuizData() {
     score += Number(selected.value);
   }
 
-  const biggestChallenge = document.getElementById("biggestChallenge").value;
-  if (!biggestChallenge) return null;
-
   const result = classifyMaturity(score);
-  return { score, biggestChallenge, ...result };
+  return { score, ...result };
 }
 
 function setVisible(section) {
@@ -155,10 +152,6 @@ document.querySelectorAll("input[type='radio']").forEach(input => {
   });
 });
 
-document.getElementById("biggestChallenge").addEventListener("change", () => {
-  errorBox.style.display = "none";
-});
-
 quizForm.addEventListener("submit", event => {
   event.preventDefault();
 
@@ -173,7 +166,6 @@ quizForm.addEventListener("submit", event => {
   document.getElementById("resultTitle").textContent = quizData.maturity;
   document.getElementById("scoreText").textContent = `Score: ${quizData.score} / 24`;
   document.getElementById("resultDescription").textContent = quizData.description;
-  document.getElementById("challengeText").textContent = quizData.biggestChallenge;
   document.getElementById("recommendationText").textContent = quizData.recommendation;
 
   setVisible(resultSection);
