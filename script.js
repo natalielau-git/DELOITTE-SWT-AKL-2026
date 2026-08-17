@@ -103,12 +103,18 @@ function getQuizData() {
 
   for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
     const selected = document.querySelector(`input[name="q${i}"]:checked`);
+
     if (!selected) return null;
+
     score += Number(selected.value);
   }
 
   const result = classifyMaturity(score);
-  return { score, ...result };
+
+  return {
+    score,
+    ...result
+  };
 }
 
 function setVisible(section) {
