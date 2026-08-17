@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deloitte AI Path to Scale Challenge</title>
+  <meta name="description" content="Deloitte AI Path to Scale Challenge for Snowflake World Tour Auckland 2026." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" id="passwordSection">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <nav class="topbar" aria-label="Event header">
+        <div class="brand-lockup">
+          <img src="Deloitte-1-660-x-660.webp" alt="Deloitte" class="logo-img" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='inline-flex';" />
+          <span class="logo-fallback" aria-label="Deloitte logo fallback">Deloitte<span class="dot">.</span></span>
+        </div>
+        <div class="event-badge">Snowflake World Tour Auckland 2026</div>
+      </nav>
+
+      <div class="hero-content access-content">
+        <div class="kicker">Access required</div>
+        <h1>Unlock the AI Path to Scale Challenge.</h1>
+        <p>
+          Enter the access code provided after submitting the Deloitte registration form.
+        </p>
+
+        <form id="passwordForm" class="access-form">
+          <label for="accessCode">Access code</label>
+          <div class="access-row">
+            <input id="accessCode" name="accessCode" type="password" autocomplete="off" placeholder="Enter access code" required />
+            <button class="btn btn-primary" type="submit">Enter</button>
+          </div>
+          <div id="passwordError" class="error-box">Incorrect access code. Please check the code shown on the Microsoft Forms thank-you page.</div>
+        </form>
+
+        <div class="notice-card">
+          <strong>For event visitors</strong>
+          <p>
+            Complete the Microsoft Forms registration first. The thank-you page will show the access code needed to open this assessment.
+          </p>
+        </div>
+
+        <div class="notice-card privacy-card">
+          <strong>Privacy Notice</strong>
+          <p>
+            This assessment does not collect or store any personal information.
+          </p>
+          <p>
+            Your registration details are collected separately through the Deloitte event registration form.
+          </p>
+          <p>
+            Assessment results are calculated within your browser and are not automatically saved or transmitted by this website.
+          </p>
+          <p>
+            If you choose to discuss your result with a Deloitte team member, any follow-up communications will use the registration details you provided separately.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero hidden" id="landingSection">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <nav class="topbar" aria-label="Event header">
+        <div class="brand-lockup">
+          <img src="Deloitte-1-660-x-660.webp" alt="Deloitte" class="logo-img" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='inline-flex';" />
+          <span class="logo-fallback" aria-label="Deloitte logo fallback">Deloitte<span class="dot">.</span></span>
+        </div>
+        <div class="event-badge">Snowflake World Tour Auckland 2026</div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="kicker">AI Path to Scale Challenge</div>
+        <h1>Discover your organisation's AI maturity in under 2 minutes.</h1>
+        <p>
+          Answer six quick questions to reveal whether your organisation is exploring, building, scaling or leading with AI.
+        </p>
+
+        <div class="notice-card">
+          <strong>Before you start</strong>
+          <p>
+            Your contact details are collected through the Deloitte Microsoft Forms registration before this assessment. This page calculates your result in your browser and does not automatically submit your quiz result back to Microsoft Forms.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="startBtn" type="button">Start assessment</button>
+          <button class="btn btn-secondary" id="lockBtn" type="button">Lock assessment</button>
+          <span class="microcopy">All quiz questions are required before your result is shown.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="quizSection" aria-labelledby="quizTitle">
+      <div class="panel-header">
+        <div>
+          <div class="kicker small">Deloitte AI Path to Scale Challenge</div>
+          <h2 id="quizTitle">AI maturity questions</h2>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-label">
+            <span id="progressText">0 of 6 answered</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <form id="quizForm" class="quiz-form">
+        <div class="question-card" data-question="q1">
+          <div class="question-number">01</div>
+          <div class="question-content">
+            <h3>Leadership & Accountability</h3>
+            <p>Which statement best describes your organisation's approach to AI leadership?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q1" value="1" /> <span>A. AI initiatives are largely driven by individual teams without executive ownership.</span></label>
+              <label class="option"><input required type="radio" name="q1" value="2" /> <span>B. Leadership is supportive of AI, but accountability for outcomes is still unclear.</span></label>
+              <label class="option"><input required type="radio" name="q1" value="3" /> <span>C. Executives actively sponsor AI initiatives and track progress against business objectives.</span></label>
+              <label class="option"><input required type="radio" name="q1" value="4" /> <span>D. AI is a standing agenda item for leadership and accountability for outcomes is clearly assigned.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card" data-question="q2">
+          <div class="question-number">02</div>
+          <div class="question-content">
+            <h3>Strategy & Value</h3>
+            <p>How is AI linked to business value in your organisation?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q2" value="1" /> <span>A. Most AI activity is exploratory and focused on testing use cases.</span></label>
+              <label class="option"><input required type="radio" name="q2" value="2" /> <span>B. Several pilots are underway, but business impact is difficult to measure.</span></label>
+              <label class="option"><input required type="radio" name="q2" value="3" /> <span>C. AI initiatives are prioritised based on expected business outcomes.</span></label>
+              <label class="option"><input required type="radio" name="q2" value="4" /> <span>D. AI investments are directly tied to transformation goals, measurable value and enterprise-wide outcomes.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card" data-question="q3">
+          <div class="question-number">03</div>
+          <div class="question-content">
+            <h3>Trustworthy AI</h3>
+            <p>How would you describe your AI governance and risk approach?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q3" value="1" /> <span>A. Governance is minimal or handled separately from AI projects.</span></label>
+              <label class="option"><input required type="radio" name="q3" value="2" /> <span>B. Policies and risk assessments exist, but are applied inconsistently.</span></label>
+              <label class="option"><input required type="radio" name="q3" value="3" /> <span>C. Governance and risk controls are incorporated into major AI initiatives.</span></label>
+              <label class="option"><input required type="radio" name="q3" value="4" /> <span>D. Trust, risk, governance and human oversight are embedded across the AI lifecycle.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card" data-question="q4">
+          <div class="question-number">04</div>
+          <div class="question-content">
+            <h3>Operating Model</h3>
+            <p>Which statement best describes how AI is adopted across your workforce?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q4" value="1" /> <span>A. AI tools are used individually with little coordination.</span></label>
+              <label class="option"><input required type="radio" name="q4" value="2" /> <span>B. Departments are experimenting independently with different AI tools.</span></label>
+              <label class="option"><input required type="radio" name="q4" value="3" /> <span>C. A common approach is emerging for AI adoption, governance and support.</span></label>
+              <label class="option"><input required type="radio" name="q4" value="4" /> <span>D. AI is integrated into how work is performed, with humans and AI agents operating together through a coordinated operating model.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card" data-question="q5">
+          <div class="question-number">05</div>
+          <div class="question-content">
+            <h3>Technology & Data Foundations</h3>
+            <p>How ready are your technology and data foundations for enterprise AI?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q5" value="1" /> <span>A. Data and systems are fragmented and difficult to connect.</span></label>
+              <label class="option"><input required type="radio" name="q5" value="2" /> <span>B. Foundational technology exists, but scaling AI raises cost, integration or governance concerns.</span></label>
+              <label class="option"><input required type="radio" name="q5" value="3" /> <span>C. Most priority data sources and platforms are connected and governed.</span></label>
+              <label class="option"><input required type="radio" name="q5" value="4" /> <span>D. AI solutions can securely access trusted enterprise data and operate on a scalable architecture.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card" data-question="q6">
+          <div class="question-number">06</div>
+          <div class="question-content">
+            <h3>Change Readiness</h3>
+            <p>How prepared is your organisation to adopt AI at scale?</p>
+            <div class="options">
+              <label class="option"><input required type="radio" name="q6" value="1" /> <span>A. AI readiness is mostly focused on awareness sessions and training.</span></label>
+              <label class="option"><input required type="radio" name="q6" value="2" /> <span>B. Teams understand AI tools but ways of working have changed very little.</span></label>
+              <label class="option"><input required type="radio" name="q6" value="3" /> <span>C. Business teams are redesigning processes and workflows to incorporate AI.</span></label>
+              <label class="option"><input required type="radio" name="q6" value="4" /> <span>D. The organisation is actively transforming how humans and AI work together, with clear adoption plans and defined responsibilities.</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="bonus-card">
+          <label for="biggestChallenge">
+            <span class="bonus-title">Required question</span>
+            Which Path to Scale area is your biggest challenge today?
+          </label>
+          <select id="biggestChallenge" name="biggestChallenge" required>
+            <option value="" selected disabled>Select an area</option>
+            <option value="Leadership & Accountability">Leadership & Accountability</option>
+            <option value="Strategy & Value">Strategy & Value</option>
+            <option value="Trustworthy AI">Trustworthy AI</option>
+            <option value="Operating Model">Operating Model</option>
+            <option value="Technology & Data Foundations">Technology & Data Foundations</option>
+            <option value="Change Readiness">Change Readiness</option>
+          </select>
+        </div>
+
+        <div id="errorBox" class="error-box">Please answer all six maturity questions and select your biggest challenge before viewing your result.</div>
+
+        <div class="form-actions">
+          <button class="btn btn-secondary" type="button" id="backToStartBtn">Back</button>
+          <button class="btn btn-primary" type="submit">Get my result</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel result-panel hidden" id="resultSection" aria-labelledby="resultTitle">
+      <div class="result-visual">
+        <div class="result-badge">Your AI maturity result</div>
+        <h2 id="resultTitle">AI Explorer</h2>
+        <p class="score" id="scoreText">Score: 0 / 24</p>
+        <p class="description" id="resultDescription"></p>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-card">
+          <h3>Your biggest challenge</h3>
+          <p id="challengeText"></p>
+        </article>
+        <article class="insight-card">
+          <h3>Suggested next conversation</h3>
+          <p id="recommendationText"></p>
+        </article>
+      </div>
+
+      <div class="lead-card">
+        <div>
+          <h3>✅ Your AI maturity profile is ready</h3>
+          <p>
+            Take a screenshot of this result or show this screen to a Deloitte team member.
+          </p>
+          <p style="margin-top: 16px;">
+            We'll use the registration details you provided during sign-up to send:
+          </p>
+          <div class="next-steps">
+            <div class="next-step">✓ Your AI maturity profile</div>
+            <div class="next-step">✓ Personalised Deloitte recommendations</div>
+            <div class="next-step">✓ Suggested next steps on your AI journey</div>
+          </div>
+          <p style="margin-top: 16px;">
+            Our team can also walk you through your result and discuss how organisations at your stage are approaching AI adoption and scaling.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-actions result-actions">
+        <button class="btn btn-secondary" type="button" id="startAgainBtn">Start again</button>
+        <button class="btn btn-secondary" type="button" id="lockFromResultBtn">Lock assessment</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Deloitte AI Path to Scale Challenge | Snowflake World Tour Auckland 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
