@@ -139,16 +139,6 @@ passwordForm.addEventListener("submit", event => {
 
 document.getElementById("startBtn").addEventListener("click", () => setVisible(quizSection));
 document.getElementById("backToStartBtn").addEventListener("click", () => setVisible(landingSection));
-document.getElementById("lockBtn").addEventListener("click", lockQuiz);
-document.getElementById("lockFromResultBtn").addEventListener("click", lockQuiz);
-
-document.getElementById("startAgainBtn").addEventListener("click", () => {
-  quizForm.reset();
-  errorBox.style.display = "none";
-  updateSelectedCards();
-  updateProgress();
-  setVisible(landingSection);
-});
 
 document.querySelectorAll("input[type='radio']").forEach(input => {
   input.addEventListener("change", () => {
