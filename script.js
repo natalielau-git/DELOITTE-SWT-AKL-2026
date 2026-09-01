@@ -27,16 +27,16 @@ function unlockQuiz() {
   setVisible(landingSection);
 }
 
-function lockQuiz() {
-  sessionStorage.removeItem(UNLOCK_STORAGE_KEY);
-  quizForm.reset();
-  errorBox.style.display = "none";
-  updateSelectedCards();
-  updateProgress();
-  accessCodeInput.value = "";
-  passwordError.style.display = "none";
-  setVisible(passwordSection);
-}
+// function lockQuiz() {
+//   sessionStorage.removeItem(UNLOCK_STORAGE_KEY);
+//   quizForm.reset();
+//   errorBox.style.display = "none";
+//   updateSelectedCards();
+//   updateProgress();
+//   accessCodeInput.value = "";
+//   passwordError.style.display = "none";
+//   setVisible(passwordSection);
+// }
 
 function classifyMaturity(score) {
   if (score <= 10) {
@@ -147,6 +147,7 @@ document.querySelectorAll("input[type='radio']").forEach(input => {
     updateProgress();
   });
 });
+
 
 quizForm.addEventListener("submit", event => {
   event.preventDefault();
