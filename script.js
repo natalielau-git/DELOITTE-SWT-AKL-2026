@@ -27,16 +27,6 @@ function unlockQuiz() {
   setVisible(landingSection);
 }
 
-// function lockQuiz() {
-//   sessionStorage.removeItem(UNLOCK_STORAGE_KEY);
-//   quizForm.reset();
-//   errorBox.style.display = "none";
-//   updateSelectedCards();
-//   updateProgress();
-//   accessCodeInput.value = "";
-//   passwordError.style.display = "none";
-//   setVisible(passwordSection);
-// }
 
 function classifyMaturity(score) {
   if (score <= 10) {
@@ -137,8 +127,16 @@ passwordForm.addEventListener("submit", event => {
   }
 });
 
-document.getElementById("startBtn").addEventListener("click", () => setVisible(quizSection));
-document.getElementById("backToStartBtn").addEventListener("click", () => setVisible(landingSection));
+const startBtn = document.getElementById("startBtn");
+const backToStartBtn = document.getElementById("backToStartBtn");
+
+if (startBtn) {
+  startBtn.addEventListener("click", () => setVisible(quizSection));
+}
+
+if (backToStartBtn) {
+  backToStartBtn.addEventListener("click", () => setVisible(landingSection));
+}
 
 document.querySelectorAll("input[type='radio']").forEach(input => {
   input.addEventListener("change", () => {
